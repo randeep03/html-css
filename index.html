@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop - Order</title>
+    <link rel="icon" href="images/image1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Pizza Shop</h1>
+        <p>Order your favorite pizza now!</p>
+        <!-- Pizza Shop Image -->
+        <img src="images/image1.jpg" alt="Pizza Shop" class="header-image">
+    </header>
+
+    <!-- Pizza Order Form -->
+    <section id="order-section">
+        <h2>Order Your Pizza</h2>
+        
+        <!-- Sample Pizza Image -->
+        <img src="images/image3.jpg" alt="Pizza" class="form-image">
+
+        <form method="GET">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="pizza-count">How many pizzas?</label>
+            <input type="number" id="pizza-count" name="pizza-count" min="1" required><br>
+
+            <label>Pizza Size:</label><br>
+            <input type="radio" id="small" name="size" value="Small" required>
+            <label for="small">Small</label><br>
+            <input type="radio" id="medium" name="size" value="Medium">
+            <label for="medium">Medium</label><br>
+            <input type="radio" id="large" name="size" value="Large">
+            <label for="large">Large</label><br>
+
+            <label>Choose your toppings:</label><br>
+            <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+            <label for="pepperoni">Pepperoni</label><br>
+            <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+            <label for="mushrooms">Mushrooms</label><br>
+            <input type="checkbox" id="onions" name="toppings" value="Onions">
+            <label for="onions">Onions</label><br>
+
+            <label for="special-instructions">Special Instructions:</label><br>
+            <textarea id="special-instructions" name="special-instructions" rows="4" cols="50"></textarea><br>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Confirmation Section -->
+    <section id="confirmation-section" style="display:none;">
+        <h2>Order Confirmation</h2>
+        <div id="confirmation-message">
+            <p>Your order has been placed!</p>
+            <p>Name: <span id="confirm-name"></span></p>
+            <p>Email: <span id="confirm-email"></span></p>
+            <p>Phone: <span id="confirm-phone"></span></p>
+            <p>Pizzas: <span id="confirm-pizza-count"></span></p>
+            <p>Size: <span id="confirm-size"></span></p>
+            <p>Toppings: <span id="confirm-toppings"></span></p>
+            <p>Special Instructions: <span id="confirm-instructions"></span></p>
+        </div>
+    </section>
+</body>
+</html>
